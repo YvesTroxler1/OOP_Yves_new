@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{41EB583C-3B44-448C-8CA9-859703FEEF7F}</ProjectGuid>
+    <ProjectGuid>{2118331B-21F0-4BE9-B377-0D40EDE1F13F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Würfel_Yves</RootNamespace>
-    <AssemblyName>Würfel_Yves</AssemblyName>
+    <RootNamespace>Warenkorb_Yves</RootNamespace>
+    <AssemblyName>Warenkorb_Yves</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,20 +52,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
+    <Compile Include="OrderProducts.cs" />
+    <Compile Include="Products.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WarenKorb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarenKorb.Designer.cs">
+      <DependentUpon>WarenKorb.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

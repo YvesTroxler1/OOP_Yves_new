@@ -30,8 +30,13 @@ namespace RechteckBerechner
 
         private void buttonBeenden_Click(object sender, EventArgs e)
         {
-            // Schließe das Formular (die Anwendung)
+
             this.Close();
+        }
+
+        private void textBoxBreite_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

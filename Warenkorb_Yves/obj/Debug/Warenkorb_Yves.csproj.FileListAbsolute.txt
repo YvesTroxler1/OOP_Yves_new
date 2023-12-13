@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\bin\Debug\Warenkorb_Yves.exe.config
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\bin\Debug\Warenkorb_Yves.exe
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\bin\Debug\Warenkorb_Yves.pdb
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.exe
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.pdb
+C:\Visiul studio\OOP_Yves\Warenkorb_Yves\obj\Debug\Warenkorb_Yves.Form1.resources

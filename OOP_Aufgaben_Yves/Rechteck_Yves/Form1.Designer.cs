@@ -71,6 +71,7 @@
             this.textBoxBreite.Name = "textBoxBreite";
             this.textBoxBreite.Size = new System.Drawing.Size(448, 31);
             this.textBoxBreite.TabIndex = 3;
+            this.textBoxBreite.TextChanged += new System.EventHandler(this.textBoxBreite_TextChanged);
             // 
             // textBoxHöhe
             // 
