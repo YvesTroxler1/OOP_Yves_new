@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\bin\Debug\Rechteck_Yves.exe.config
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\bin\Debug\Rechteck_Yves.exe
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\bin\Debug\Rechteck_Yves.pdb
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\Rechteck_Yves.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\RechteckBerechner.Form1.resources
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\Rechteck_Yves.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\Rechteck_Yves.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\Rechteck_Yves.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\Rechteck_Yves.exe
+C:\Visiul studio\OOP_Yves\OOP_Aufgaben_Yves\Rechteck_Yves\obj\Debug\Rechteck_Yves.pdb

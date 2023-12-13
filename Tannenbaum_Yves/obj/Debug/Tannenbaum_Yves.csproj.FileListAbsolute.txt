@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\bin\Debug\Tannenbaum_Yves.exe.config
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\bin\Debug\Tannenbaum_Yves.exe
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\bin\Debug\Tannenbaum_Yves.pdb
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.Form1.resources
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.exe
+C:\Visiul studio\OOP_Yves\Tannenbaum_Yves\obj\Debug\Tannenbaum_Yves.pdb

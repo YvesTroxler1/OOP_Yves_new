@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.Form1.resources
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\Mond_Yves\bin\Debug\Mond_Yves.exe.config
+C:\Visiul studio\OOP_Yves\Mond_Yves\bin\Debug\Mond_Yves.exe
+C:\Visiul studio\OOP_Yves\Mond_Yves\bin\Debug\Mond_Yves.pdb
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.exe
+C:\Visiul studio\OOP_Yves\Mond_Yves\obj\Debug\Mond_Yves.pdb

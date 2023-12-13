@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\bin\Debug\Aufgabe_Hello_World.exe.config
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\bin\Debug\Aufgabe_Hello_World.exe
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\bin\Debug\Aufgabe_Hello_World.pdb
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.Helloworld.resources
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.exe
+C:\Visiul studio\OOP_Yves\Aufgabe_Hello_World\obj\Debug\Aufgabe_Hello_World.pdb
