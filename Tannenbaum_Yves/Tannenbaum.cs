@@ -10,15 +10,12 @@ namespace Tannenbaum_Yves
         public int stammbreite;
         public int Kronenhoehe;
         public string Zeichnung;
-     
-  
-    public Zeichnen()
-    {
 
+        public void Zeichnen()
+        {
 
-
-
+            
+        }
     }
-   
-    }
+
 }
