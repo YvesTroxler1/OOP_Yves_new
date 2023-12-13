@@ -53,7 +53,6 @@
             this.textBoxStammBreite.Name = "textBoxStammBreite";
             this.textBoxStammBreite.Size = new System.Drawing.Size(406, 31);
             this.textBoxStammBreite.TabIndex = 1;
-            this.textBoxStammBreite.TextChanged += new System.EventHandler(this.textBoxStammBreite_TextChanged);
             // 
             // label2
             // 
@@ -104,6 +103,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(1021, 592);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Form1
             // 
