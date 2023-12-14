@@ -25,7 +25,7 @@ namespace Tannenbaum_Yves
             // Krone zeichnen
             for (int i = 1; i <= Kronenhoehe; i++)
             {
-                TannenZeichnen.AppendLine(new string(' ', Kronenhoehe - i) + new string('*', i * 2 - 1));
+                TannenZeichnen.AppendLine(new string(' ', Kronenhoehe - i) + new string('', i 2 - 1)) ;
             }
 
             // Stamm zeichnen
@@ -38,5 +38,4 @@ namespace Tannenbaum_Yves
         }
     }
 
-    }
-    
+}
