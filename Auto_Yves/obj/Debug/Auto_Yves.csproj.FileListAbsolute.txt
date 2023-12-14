@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\Auto_Yves\bin\Debug\Auto_Yves.exe.config
+C:\Visiul studio\OOP_Yves\Auto_Yves\bin\Debug\Auto_Yves.exe
+C:\Visiul studio\OOP_Yves\Auto_Yves\bin\Debug\Auto_Yves.pdb
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.Form.resources
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.exe
+C:\Visiul studio\OOP_Yves\Auto_Yves\obj\Debug\Auto_Yves.pdb
