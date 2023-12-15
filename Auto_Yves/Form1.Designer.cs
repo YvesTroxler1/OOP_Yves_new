@@ -1,6 +1,6 @@
-﻿namespace Auto_Yves
+﻿namespace AutoSimolator
 {
-    partial class Form
+    partial class Form1
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -23,15 +23,14 @@
         #region Vom Windows Form-Designer generierter Code
 
         /// <summary>
-        /// Erforderliche Methode für die Designerunterstützung.
+        /// Erforderliche Methode für die Designerunterstützung
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxTempo = new System.Windows.Forms.TextBox();
             this.textBoxGang = new System.Windows.Forms.TextBox();
-            this.progressBarTanken = new System.Windows.Forms.ProgressBar();
             this.buttonBremse = new System.Windows.Forms.Button();
             this.buttonGas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxHupe = new System.Windows.Forms.PictureBox();
             this.pictureBoxTanken = new System.Windows.Forms.PictureBox();
+            this.progressBarTank = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStartAuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHupe)).BeginInit();
@@ -60,7 +60,6 @@
             this.textBoxTempo.TabIndex = 0;
             this.textBoxTempo.Text = "0";
             this.textBoxTempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxTempo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBoxGang
             // 
@@ -75,13 +74,6 @@
             this.textBoxGang.Text = "0";
             this.textBoxGang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // progressBarTanken
-            // 
-            this.progressBarTanken.Location = new System.Drawing.Point(223, 472);
-            this.progressBarTanken.Name = "progressBarTanken";
-            this.progressBarTanken.Size = new System.Drawing.Size(494, 57);
-            this.progressBarTanken.TabIndex = 2;
-            // 
             // buttonBremse
             // 
             this.buttonBremse.Location = new System.Drawing.Point(318, 550);
@@ -90,7 +82,6 @@
             this.buttonBremse.TabIndex = 3;
             this.buttonBremse.Text = "Bremse";
             this.buttonBremse.UseVisualStyleBackColor = true;
-            this.buttonBremse.Click += new System.EventHandler(this.buttonBremse_Click);
             // 
             // buttonGas
             // 
@@ -100,7 +91,6 @@
             this.buttonGas.TabIndex = 4;
             this.buttonGas.Text = "Gas";
             this.buttonGas.UseVisualStyleBackColor = true;
-            this.buttonGas.Click += new System.EventHandler(this.buttonGas_Click);
             // 
             // label1
             // 
@@ -119,16 +109,14 @@
             this.comboBoxAutos.Name = "comboBoxAutos";
             this.comboBoxAutos.Size = new System.Drawing.Size(300, 33);
             this.comboBoxAutos.TabIndex = 6;
-            this.comboBoxAutos.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutos_SelectedIndexChanged);
             // 
             // labelPS
             // 
             this.labelPS.AutoSize = true;
             this.labelPS.Location = new System.Drawing.Point(795, 128);
             this.labelPS.Name = "labelPS";
-            this.labelPS.Size = new System.Drawing.Size(24, 25);
+            this.labelPS.Size = new System.Drawing.Size(0, 25);
             this.labelPS.TabIndex = 7;
-            this.labelPS.Text = "0";
             // 
             // panel1
             // 
@@ -137,7 +125,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(36, 40);
             this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBoxStartAuto
             // 
@@ -150,7 +137,6 @@
             this.pictureBoxStartAuto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxStartAuto.TabIndex = 9;
             this.pictureBoxStartAuto.TabStop = false;
-            this.pictureBoxStartAuto.Click += new System.EventHandler(this.pictureBoxStartAuto_Click);
             // 
             // pictureBox1
             // 
@@ -183,11 +169,20 @@
             this.pictureBoxTanken.TabIndex = 12;
             this.pictureBoxTanken.TabStop = false;
             // 
-            // Form
+            // progressBarTank
+            // 
+            this.progressBarTank.ForeColor = System.Drawing.Color.Lime;
+            this.progressBarTank.Location = new System.Drawing.Point(249, 472);
+            this.progressBarTank.Name = "progressBarTank";
+            this.progressBarTank.Size = new System.Drawing.Size(500, 43);
+            this.progressBarTank.TabIndex = 13;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 960);
+            this.Controls.Add(this.progressBarTank);
             this.Controls.Add(this.pictureBoxTanken);
             this.Controls.Add(this.pictureBoxHupe);
             this.Controls.Add(this.pictureBox1);
@@ -198,10 +193,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGas);
             this.Controls.Add(this.buttonBremse);
-            this.Controls.Add(this.progressBarTanken);
             this.Controls.Add(this.textBoxGang);
             this.Controls.Add(this.textBoxTempo);
-            this.Name = "Form";
+            this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStartAuto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -216,7 +210,7 @@
 
         private System.Windows.Forms.TextBox textBoxTempo;
         private System.Windows.Forms.TextBox textBoxGang;
-        private System.Windows.Forms.ProgressBar progressBarTanken;
+        private System.Windows.Forms.ProgressBar TankProgressBarUpdated;
         private System.Windows.Forms.Button buttonBremse;
         private System.Windows.Forms.Button buttonGas;
         private System.Windows.Forms.Label label1;
@@ -227,6 +221,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxHupe;
         private System.Windows.Forms.PictureBox pictureBoxTanken;
+        private System.Windows.Forms.ProgressBar progressBarTank;
     }
 }
 

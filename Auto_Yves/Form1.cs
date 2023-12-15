@@ -4,140 +4,234 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoSimolator;
 
-namespace Auto_Yves
+namespace AutoSimolator
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class Form1 : Form
     {
-        private Auto selectedAuto;
-        
-        public Form()
+        public Form1()
         {
-            InitializeComponent();  
-            
-            comboBoxAutos.Items.Add(new Auto("Porsche", 250));
-            comboBoxAutos.Items.Add(new Auto("Opel", 90));
-            comboBoxAutos.Items.Add(new Auto("Ferrari", 370));
+            InitializeComponent();
+            this.Load += Form1_Load;
 
-            pictureBoxStartAuto.Click += pictureBoxStartAuto_Click;
             pictureBoxTanken.Click += pictureBoxTanken_Click;
+            pictureBoxStartAuto.Click += pictureBoxStartAuto_Click;
+            pictureBoxHupe.Click += pictureBoxHupe_Click;
+
+            buttonGas.MouseDown += buttonGas_MouseDown;
+            buttonGas.MouseUp += buttonGas_MouseUp;
+
+            buttonBremse.MouseDown += buttonBremse_MouseDown;
+            buttonBremse.MouseUp += buttonBremse_MouseUp;
 
             
-        }
-  
-    
-
-          
 
 
-       
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void buttonBremse_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonGas_Click(object sender, EventArgs e)
-        {
-            if (selectedAuto.IstMotorGestartet)
+            string[] Marken = { "Porsche", "Opel", "Ferrari" };
+            string[] PS = { "250", "90", "370" };
+            for (int i = 0; i < Marken.Length; i++)
             {
-
-                selectedAuto.GibGas();
-
-
-
-
-
+                Auto auto = new Auto(Marken[i], Convert.ToInt32(PS[i]));
+                comboBoxAutos.Items.Add(auto);
             }
-        }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void pictureBoxHupe_Click(object sender, EventArgs e)
-        {
 
         }
-    
+
         private void comboBoxAutos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedAuto = comboBoxAutos.SelectedItem as Auto;
-        }
-
-        private void pictureBoxStartAuto_Click(object sender, EventArgs e)
-        {
-            if (selectedAuto != null)
+            if (comboBoxAutos.SelectedItem != null)
             {
-                while(selectedAuto.TankFeullstand > 0)
+                Auto auto = comboBoxAutos.SelectedItem as Auto;
+
+                labelPS.Text = auto.PS.ToString();
+                textBoxTempo.Text = auto.AktuelleGeschwindikeit.ToString();
+                progressBarTank.Value = auto.TankFeullstand;
+                auto.BerechneGang();
+                textBoxGang.Text = auto.AktuellerGang.ToString();
+                if (auto.IstMotorGestartet == true)
                 {
-                    selectedAuto.SchalteMotorEin();
-                    // Hier kannst du weitere Aktionen nach dem Starten des Motors ausführen
+                    pictureBox1.BackColor = Color.Green;
                 }
-       
+                else
+                {
+                    panel1.BackColor = Color.Red;
+                }
             }
-            else
-            {
-                MessageBox.Show("Bitte wählen Sie ein Auto aus.", "Kein Auto ausgewählt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
         }
 
         private void pictureBoxTanken_Click(object sender, EventArgs e)
         {
-            if (selectedAuto != null)
+            if (comboBoxAutos.SelectedItem != null)
             {
-                try
+
+                Auto auto = comboBoxAutos.SelectedItem as Auto;
+                if (auto.IstMotorGestartet != true)
                 {
-                    // Starte den Tankvorgang asynchron
-                    Task.Run(() => TankenAsync(selectedAuto));
-                    // Hier kannst du nach dem Tanken weitere Aktionen ausführen
+                    if (auto.AktuelleGeschwindikeit <= 0)
+                    {
+                        auto.auftanken();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stop driving and slow down your car!");
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message, "Fehler beim Tanken", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Shut down the engine");
+                }
+                progressBarTank.Value = auto.TankFeullstand;
+            }
+            else
+            {
+                MessageBox.Show("No Car Selected");
+            }
+
+        }
+
+        private void pictureBoxStartAuto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxAutos.SelectedItem != null)
+                {
+
+                    Auto auto = comboBoxAutos.SelectedItem as Auto;
+                    if (auto.IstMotorGestartet == true)
+                    {
+                        auto.SchalteMotorAus();
+                        if (auto.IstMotorGestartet != true)
+                        {
+                            pictureBox1.BackColor = Color.Red;
+                        }
+                        textBoxTempo.Text = auto.AktuelleGeschwindikeit.ToString();
+                        textBoxGang.Text = auto.AktuellerGang.ToString();
+                    }
+                    else
+                    {
+                        auto.SchalteMotorEin();
+                        if (auto.IstMotorGestartet == true)
+                        {
+                            panel1.BackColor = Color.Green;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No Car Selected");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        public bool Gasgeben = false;
+        private void buttonGas_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (comboBoxAutos.SelectedItem != null)
+            {
+                Auto auto = comboBoxAutos.SelectedItem as Auto;
+                Gasgeben = true;
+                if (auto.IstMotorGestartet == true)
+                {
+                    while (Gasgeben == true)
+                    {
+                        Application.DoEvents();
+                        auto.GibGas();
+                        textBoxTempo.Text = auto.AktuelleGeschwindikeit.ToString();
+                        textBoxGang.Text = auto.AktuellerGang.ToString();
+                        progressBarTank.Value = auto.TankFeullstand;
+                        if (auto.IstMotorGestartet != true)
+                        {
+                            panel1.BackColor = Color.Red;
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("start engine");
                 }
             }
             else
             {
-                MessageBox.Show("Bitte wählen Sie ein Auto aus.", "Kein Auto ausgewählt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No Car Selected");
+
             }
         }
 
-        private async Task TankenAsync(Auto auto)
+        private void buttonGas_MouseUp(object sender, MouseEventArgs e)
         {
-            // Simuliere den Tankvorgang asynchron
-            for (int i = 0; i <= 100; i++)
-            {
-                await Task.Delay(25); // Simuliere eine Verzögerung
-                 // Aktualisiere den Tankfüllstand
-                UpdateProgressBar(i); // Aktualisiere die ProgressBar
-            }
-        } 
+            Gasgeben = false;
+        }
 
-        private void UpdateProgressBar(int value)
+
+
+        bool bremsen = false;
+        private void buttonBremse_MouseDown(object sender, MouseEventArgs e)
         {
-            if (progressBarTanken.InvokeRequired)
+            if (comboBoxAutos.SelectedItem != null)
             {
-                progressBarTanken.Invoke((MethodInvoker)delegate
+                Auto auto = comboBoxAutos.SelectedItem as Auto;
+                bremsen = true;
+
+                while (bremsen == true)
                 {
-                    progressBarTanken.Value = value;
-                });
+                    Application.DoEvents();
+                    auto.Bremse();
+                    textBoxTempo.Text = auto.AktuelleGeschwindikeit.ToString();
+                    textBoxGang.Text = auto.AktuellerGang.ToString();
+
+                }
             }
             else
             {
-                progressBarTanken.Value = value;
+                MessageBox.Show("No Car Selected");
+
+            }
+
+        }
+
+        private void buttonBremse_MouseUp(object sender, MouseEventArgs e)
+        {
+            bremsen = false;
+        }
+
+        private void pictureBoxHupe_Click(object sender, EventArgs e)
+        {
+            if (comboBoxAutos.SelectedItem != null)
+            {
+                Auto auto = comboBoxAutos.SelectedItem as Auto;
+
+                if (auto.IstMotorGestartet == true)
+                {
+                    auto.Hupen();
+
+                }
+                else
+                {
+                    MessageBox.Show("start engine");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Car Selected");
+
             }
         }
     }

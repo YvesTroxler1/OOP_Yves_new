@@ -1,0 +1,10 @@
+C:\Visiul studio\OOP_Yves\Kontakte\bin\Debug\Kontakte.exe.config
+C:\Visiul studio\OOP_Yves\Kontakte\bin\Debug\Kontakte.exe
+C:\Visiul studio\OOP_Yves\Kontakte\bin\Debug\Kontakte.pdb
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.csproj.AssemblyReference.cache
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.Form1.resources
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.Properties.Resources.resources
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.csproj.GenerateResource.cache
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.csproj.CoreCompileInputs.cache
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.exe
+C:\Visiul studio\OOP_Yves\Kontakte\obj\Debug\Kontakte.pdb
